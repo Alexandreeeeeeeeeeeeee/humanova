@@ -55,6 +55,12 @@ header {
   display: block;
 }
 
+.logo img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .nav-links {
   display: flex;
   list-style: none;
