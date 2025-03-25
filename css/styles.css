@@ -48,13 +48,6 @@ header {
   align-items: center;
 }
 
-.logo {
-  width: 120px;
-  height: auto;
-  max-width: 100%;
-  display: block;
-}
-
 .logo img {
   max-width: 100%;
   height: auto;
