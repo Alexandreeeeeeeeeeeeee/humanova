@@ -602,7 +602,7 @@ footer {
 /* Estilos para seção Quem Somos */
 #sobre {
   background-color: #f9f9f9;
-  padding: 10px 0;
+  padding: 60px 0;
   position: relative; /* <- ADICIONA ISSO */
 }
 
