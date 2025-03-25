@@ -49,8 +49,10 @@ header {
 }
 
 .logo img {
-  height: 50px; /* ou ajuste conforme necessário, tipo 40px, 60px etc */
-  width: auto;
+    width: 120px;          /* Volta ao tamanho antigo */
+    height: auto;          /* Mantém a proporção */
+    max-width: 100%;       /* Garante responsividade, como no antigo */
+    display: block;        /* Consistência com o antigo */
 }
 
 .nav-links {
