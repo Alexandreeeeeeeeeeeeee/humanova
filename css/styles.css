@@ -238,7 +238,7 @@ background: linear-gradient(135deg, #2a4db5 0%, #2a4db5 70%, #c4aefc 100%); /* A
 .phone-screen video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
     display: block;
 }
 
