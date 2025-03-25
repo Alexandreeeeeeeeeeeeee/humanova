@@ -49,9 +49,8 @@ header {
 }
 
 .logo img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+  height: 50px; /* ou ajuste conforme necessário, tipo 40px, 60px etc */
+  width: auto;
 }
 
 .nav-links {
