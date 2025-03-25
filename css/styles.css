@@ -239,7 +239,8 @@ background: linear-gradient(135deg, #2a4db5 0%, #2a4db5 70%, #c4aefc 100%); /* A
   width: 100%;
   height: 100%;
   object-fit: fill;
-    display: block;
+  transform: translateY(-1px); /* ou -2px se for necessário */
+  display: block;
 }
 
 .section {
