@@ -211,7 +211,6 @@ background: linear-gradient(135deg, #2a4db5 0%, #2a4db5 70%, #c4aefc 100%); /* A
   width: 320px;
   height: 670px;
   margin: 0 auto;
-  animation: float 6s ease-in-out infinite;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
   border-radius: 40px;
 }
