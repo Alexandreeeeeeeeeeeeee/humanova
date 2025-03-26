@@ -204,7 +204,9 @@ background: linear-gradient(135deg, #2a4db5 0%, #2a4db5 70%, #c4aefc 100%); /* A
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  text-shadow:     
+    0 0 1px rgba(31, 58, 147, 0.3), /* Cor principal do gradiente */
+    0 0 2px rgba(167, 139, 250, 0.2); /* Cor secundária do gradiente */;
 }
 
 .hero-text p {
