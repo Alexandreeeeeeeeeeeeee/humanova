@@ -66,62 +66,53 @@ document.addEventListener("DOMContentLoaded", function () {
 
   sections.forEach((section) => observer.observe(section));
 
-  // Envio do formulário com validação
-  const contactForm = document.getElementById("contact-form");
-  if (contactForm) {
-    contactForm.addEventListener("submit", function (event) {
-      event.preventDefault();
+// Envio do formulário com validação + integração com Make
+const contactForm = document.getElementById("contact-form");
+if (contactForm) {
+  contactForm.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-      // Validação dos campos
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const message = document.getElementById("message").value.trim();
+    // Validação dos campos
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
 
-      if (!name || !email || !message) {
-        alert("Por favor, preencha todos os campos obrigatórios.");
-        return;
-      }
-      if (!/\S+@\S+\.\S+/.test(email)) {
-        alert("Por favor, insira um email válido.");
-        return;
-      }
+    if (!name || !email || !message) {
+      alert("Por favor, preencha todos os campos obrigatórios.");
+      return;
+    }
+    if (!/\S+@\S+\.\S+/.test(email)) {
+      alert("Por favor, insira um email válido.");
+      return;
+    }
 
-      // Envio via Formcarry
-      const formData = new FormData(this);
-      fetch("https://formcarry.com/s/bwHjyF1Sd1h", {
-        method: "POST",
-        body: formData,
-        headers: { Accept: "application/json" },
-      })
-        .then((response) => {
-          if (response.ok) {
-            const formContainer = document.getElementById("form-container");
-            if (formContainer) {
-              formContainer.innerHTML = `
-                <div class="success-message">
-                  <h3>Mensagem enviada com sucesso!</h3>
-                  <p>Agradecemos pelo seu contato. Responderemos em breve.</p>
-                </div>
-              `;
-            } else {
-              console.error(
-                'Erro: Elemento com ID "form-container" não encontrado.'
-              );
-            }
-          } else {
-            throw new Error("Erro ao enviar a mensagem");
+    // Envio via Make Webhook
+    const formData = new FormData(this);
+    fetch("https://hook.us2.make.com/n6msmee7gpgyqf7nfmj9apewkh1dgh91", {
+      method: "POST",
+      body: formData,
+    })
+      .then((response) => {
+        if (response.ok) {
+          const formContainer = document.getElementById("form-container");
+          if (formContainer) {
+            formContainer.innerHTML = `
+              <div class="success-message">
+                <h3>Mensagem enviada com sucesso!</h3>
+                <p>Agradecemos pelo seu contato. Responderemos em breve.</p>
+              </div>
+            `;
           }
-        })
-        .catch((error) => {
-          console.error("Erro:", error);
-          alert(
-            "Houve um problema ao enviar sua mensagem. Por favor, tente novamente mais tarde."
-          );
-        });
-    });
-  } else {
-    console.error(
-      'Erro: Formulário com ID "contact-form" não encontrado.'
-    );
-  }
-});
+        } else {
+          throw new Error("Erro ao enviar a mensagem");
+        }
+      })
+      .catch((error) => {
+        console.error("Erro:", error);
+        alert(
+          "Houve um problema ao enviar sua mensagem. Por favor, tente novamente mais tarde."
+        );
+      });
+  });
+}
+
