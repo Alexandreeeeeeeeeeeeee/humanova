@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://centrah.com.br/sitemap.xml
