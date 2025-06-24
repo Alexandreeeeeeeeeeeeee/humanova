@@ -21,10 +21,15 @@
 }
 
 body {
+  font-family: 'Roboto', sans-serif;
   background-color: var(--light-color);
   color: var(--dark-color);
   line-height: 1.6;
   overflow-x: hidden;
+}
+
+h1, h2, h3, .nav-links li a, .btn {
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 header {
