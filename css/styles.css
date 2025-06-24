@@ -49,7 +49,7 @@ header {
 }
 
 .logo img {
-  width: 120px;          /* Volta ao tamanho antigo */
+  width: 180px;          /* Volta ao tamanho antigo */
   height: auto;          /* Mantém a proporção */
   max-width: 100%;       /* Garante responsividade, como no antigo */
   display: block;        /* Consistência com o antigo */
