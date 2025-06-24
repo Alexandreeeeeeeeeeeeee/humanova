@@ -197,21 +197,18 @@ background: linear-gradient(135deg, #2a4db5 0%, #2a4db5 70%, #c4aefc 100%); /* A
 }
 
 .hero-text h1 {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
-  color: rgb(41, 46, 50);
   font-size: 69px;
   line-height: 60px;
   text-transform: uppercase;
   letter-spacing: -2px;
   margin-bottom: 25px;
-  background: var(--gradient-primary);
+
+  background: linear-gradient(90deg, #000000, #333333, #000000);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  text-shadow:     
-    0 0 1px rgba(31, 58, 147, 0.3), /* Cor principal do gradiente */
-    0 0 2px rgba(167, 139, 250, 0.2); /* Cor secundária do gradiente */;
 }
 
 .hero-text p {
